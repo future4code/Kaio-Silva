@@ -75,32 +75,30 @@ function imprimirNovoArray(){
     for (let i = 0; i < array.length; i++){
         
         if (array[i] % 2 === 0){
-            n = 0
-            novoArray[n] = array[i]
-            n++
+            
+            novoArray[i] = array[i]
 
-            console.log(novoArray)
-        } else{}
-        
-
-
+        }
+    
     }
-
+console.log(novoArray)
 
 }
 
-//  imprimirNovoArray()
+ imprimirNovoArray()
 
 function imprimiOutroArray (){
+    outroArray = []
     for (let i = 0; i < array.length; i++){
-        outroArray = []
+        
 
         outroArray[i] = `o elemento do index ${i} é ${array[i]}`
-        console.log(outroArray)
+        
     }
+    console.log(outroArray)
 }
 
-// imprimiOutroArray()
+//  imprimiOutroArray()
 
 function maiorEMenor (){
     let maior = 0
@@ -115,11 +113,12 @@ function maiorEMenor (){
         if(array[i] < menor){
             menor = array[i]
         }
-        console.log(`o maior número é ${maior} e o menor é ${menor}`)
+        
 
     }
-    return maior
-    return menor
+    console.log(`o maior número é ${maior} e o menor é ${menor}`)
+    // return maior
+    // return menor
 }
 
-maiorEMenor()
+//  maiorEMenor()
