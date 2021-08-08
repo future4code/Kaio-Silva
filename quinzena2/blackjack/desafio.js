@@ -1,25 +1,19 @@
-/**
- * EXEMPLO DE UTILIZAÇÃO DA 'comprarCarta'
- * 
- * 
-    const carta = comprarCarta(); // Sorteia uma carta. Por exemplo, o rei de ouros
-    
-    console.log(carta.texto) // imprime o texto da carta. Exemplo: "K♦️" (indica "K" de ouros)
-    console.log(carta.valor) // imprime o valor da carta (um número). Exemplo: 10 (dado que "K" vale 10)
- * 
- * 
- * 
- */
 
-     const carta = comprarCarta();
-     const carta2 = comprarCarta();
-     const carta3 = comprarCarta();
-     const carta4 = comprarCarta();
+
+     const cartaPlayer = comprarCarta();
+     const cartaPlayer2 = comprarCarta();
+
+     const pontuacaoPlayer = (cartaPlayer.valor + cartaPlayer2.valor )
+
+     const outraNovaCartaPLayer = comprarCarta();
+
+     const novaCartaPlayer = comprarCarta();
+     const novaCartaPlayer2 = comprarCarta();
+     
+     const novaPontuacaoPlayer = ( novaCartaPlayer.valor + novaCartaPlayer2.valor)
+
+
    
-  
-  
-  
- 
 
     console.log("Bem-vindo(a) ao jogo de blackjack!")
 
@@ -27,44 +21,161 @@
       console.log(true)
       console.log("iniciar nova rodada:")
 
+      
+
+   if( cartaPlayer.valor + cartaPlayer2.valor < 22){
+
+      
+         const PrimeiraCarta = cartaPlayer.texto
+         const SegundaCarta = cartaPlayer2.texto
+      
+            
+         console.log( `Usuário - cartas: ${PrimeiraCarta}, ${SegundaCarta} - pontuação ${pontuacaoPlayer}.` )
+
+        
+      
+   } else {
+
+      
+        
+         const PrimeiraCarta = novaCartaPlayer.texto
+         const SegundaCarta = novaCartaPlayer2.texto
+         
+         console.log("o Usuário teve suas cartas sorteadas novamente!")
+         console.log( `Usuário - cartas: ${PrimeiraCarta}, ${SegundaCarta} - pontuação ${novaPontuacaoPlayer}.` )
+
+
+
+   }
+
+
+   const cartaPc = comprarCarta();
+   const cartaPc2 = comprarCarta();
+   const pontuacaoPc = (cartaPc.valor + cartaPc2.valor)
+
+
+
+   const novaCartaPc = comprarCarta();
+   const novaCartaPc2 = comprarCarta();
+   const novaPontuacaoPc = (novaCartaPc.valor + novaCartaPc2.valor)
+
+
+
+
+
+if(cartaPc.valor + cartaPc2.valor < 22) {
+
+         const cartaPrimeira = cartaPc.texto
+         const cartaSegunda = cartaPc2.texto
+      
+         
+          console.log( `Computador - cartas: ${cartaPrimeira}, ${cartaSegunda} - pontuação ${pontuacaoPc}.` )
+
+    } else {
+      
+         const cartaPrimeira = novaCartaPc.texto
+         const cartaSegunda = novaCartaPc2.texto
+
+         console.log("o PC teve suas cartas sorteadas novamente!")
+          console.log( `Computador - cartas: ${cartaPrimeira}, ${cartaSegunda} - pontuação ${novaPontuacaoPc}.` )
+
+      
+    }
    
-      
-      function cartaDoUsuario() {
-         const umaCarta = carta.texto
-         const outraCarta = carta2.texto
-         const umaCartaValor = carta.valor
-         const outraCartaValor = carta2.valor
-      
-         const somaDasCartas = (umaCartaValor + outraCartaValor)
-         console.log( `Usuário - cartas: ${umaCarta}, ${outraCarta} - pontuação ${somaDasCartas}.` )
 
-      }
-      
+//       if(pontuacaoPlayer > 21){
 
-      function cartaDoComputador(){
-         const umaCarta = carta3.texto
-         const outraCarta = carta4.texto
-         const umaCartaValor = carta3.valor
-         const outraCartaValor = carta4.valor
-      
-         const somaDasCartas1 = (umaCartaValor + outraCartaValor)
-         console.log( `Computador - cartas: ${umaCarta}, ${outraCarta} - pontuação ${somaDasCartas1}.` )
-      }
-      const somaUsuario = carta.valor + carta2.valor
-      const somaComputador = carta3.valor + carta4.valor
+//       if (novaPontuacaoPlayer > pontuacaoPc){
+//          console.log("O usuário ganhou!")
+//       } else if ( novaPontuacaoPlayer < pontuacaoPc){
+//          console.log("O computador ganhou!")
+//       } else {
+//          console.log("Empate")
+//       }
+//     } else if (pontuacaoPc > 21){
 
-      cartaDoUsuario()
-      cartaDoComputador()
+//          if (pontuacaoPlayer > novaPontuacaoPc){
+//             console.log("O usuário ganhou!")
+//          } else if ( pontuacaoPlayer < novaPontuacaoPc){
+//             console.log("O computador ganhou!")
+//          } else {
+//             console.log("Empate")
 
-      if (somaUsuario > somaComputador){
+
+//       }
+//    } else { 
+
+//       if (pontuacaoPlayer > pontuacaoPc){
+//          console.log("O usuário ganhou!")
+//       } else if ( pontuacaoPlayer < pontuacaoPc){
+//          console.log("O computador ganhou!")
+//       } else {
+//          console.log("Empate")
+
+//    }
+
+// }
+
+      if(pontuacaoPlayer > 21){
+
+
+         confirm(
+            `Suas cartas são ${novaCartaPlayer.texto}, ${novaCartaPlayer2.texto}. A carta revelada do computador é ${cartaPc.texto}.` +
+            "\n"+  // \n faz pular a linha
+            "Deseja comprar mais uma carta?"
+         )
+
+
+      if (novaPontuacaoPlayer > pontuacaoPc){
+         
          console.log("O usuário ganhou!")
-      } else if (somaUsuario < somaComputador){
+      } else if ( novaPontuacaoPlayer < pontuacaoPc){
          console.log("O computador ganhou!")
       } else {
          console.log("Empate")
-      } 
+      }
+    } else if (pontuacaoPc > 21){
+
+      confirm(
+         `Suas cartas são ${cartaPlayer.texto}, ${cartaPlayer2.texto}. A carta revelada do computador é ${novaCartaPc.texto}.` +
+         "\n"+  // \n faz pular a linha
+         "Deseja comprar mais uma carta?"
+      )
+
+         if (pontuacaoPlayer > novaPontuacaoPc){
+            console.log("O usuário ganhou!")
+         } else if ( pontuacaoPlayer < novaPontuacaoPc){
+            console.log("O computador ganhou!")
+         } else {
+            console.log("Empate")
+
+
+      }
+   } else { 
+
+      confirm(
+         `Suas cartas são ${cartaPlayer.texto}, ${cartaPlayer2.texto}. A carta revelada do computador é ${cartaPc.texto}.` +
+         "\n"+  // \n faz pular a linha
+         "Deseja comprar mais uma carta?"
+      )
+
+
+
+      if (pontuacaoPlayer > pontuacaoPc){
+         console.log("O usuário ganhou!")
+      } else if ( pontuacaoPlayer < pontuacaoPc){
+         console.log("O computador ganhou!")
+      } else {
+         console.log("Empate")
+
+   }
+
+}
+
 
    } else {
       console.log(false)
       console.log("O jogo acabou!")
    }
+
+   
