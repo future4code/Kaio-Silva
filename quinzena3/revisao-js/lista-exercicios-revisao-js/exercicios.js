@@ -76,15 +76,7 @@ function retornaExpressoesBooleanas() {
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
-  numeros = []
-
-  for(let i=0; i<n;i++){
-  if(i %2 ===0){
-    numeros.push(i)
-
-  }
-}
-return numeros
+  
 }
 retornaNNumerosPares()
 
@@ -188,9 +180,10 @@ criaRetangulo()
 
 // EXERCÍCIO 15
 function anonimizaPessoa(pessoa) {
-
+ const anonimo = {...pessoa,nome:"ANÔNIMO"}
+ return anonimo
 }
-
+anonimizaPessoa()
 // EXERCÍCIO 16A
 function maioresDe18(arrayDePessoas) {
 
