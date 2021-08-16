@@ -38,12 +38,20 @@ function retornaNumerosPares(array) {
  return pares
 }
 
-retornaNumerosPares()
+// retornaNumerosPares()
 
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
+   let maiorNumero = 0
+  for(let i = 0;i<array.length;i++){
+    if(array[i] > maiorNumero){
+      maiorNumero = array[i]
+    }
 
+  }
+return maiorNumero
 }
+retornaMaiorNumero()
 
 // EXERCÍCIO 05
 function retornaQuantidadeElementos(array) {
