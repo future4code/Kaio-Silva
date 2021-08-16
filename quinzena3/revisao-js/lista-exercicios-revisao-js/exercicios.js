@@ -9,12 +9,20 @@
     console.log(array) 
     return array
   } 
-  inverteArray()
+  // inverteArray()
   
 
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
-        
+ novo =[]
+ 
+ for(let i=0;i<array.length;i++){
+   if(array[i] %2 ===0){
+     novo.push(array[i] * array[i]) 
+   }
+   
+ }
+ return novo
  
 } 
 retornaNumerosParesElevadosADois()
