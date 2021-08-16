@@ -111,10 +111,36 @@ function comparaDoisNumeros(num1, num2) {
   //   maiorDivisivelPorMenor: Y,
   //   diferenca: Z
   // }
+  if(num1 > num2){
+    const objeto = {
+      maiorNumero: num1,
+      maiorDivisivelPorMenor: num1 % num2 ===0,
+      diferenca: num1 - num2
+    }
+    return objeto
+  } else if(num1 < num2){
+    const objeto = {
+      maiorNumero: num2,
+      maiorDivisivelPorMenor: num2 % num1 ===0,
+      diferenca: num2 - num1
+  } 
+  return objeto
+} else {
+  const objeto = {
+    maiorNumero: num1,
+    maiorDivisivelPorMenor: num2 % num1 ===0,
+    diferenca: num2 - num1
+} 
+return objeto
 }
+
+}
+comparaDoisNumeros()
+
 
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
+
 
 }
 
