@@ -51,12 +51,13 @@ function retornaMaiorNumero(array) {
   }
 return maiorNumero
 }
-retornaMaiorNumero()
+// retornaMaiorNumero()
 
 // EXERCÍCIO 05
 function retornaQuantidadeElementos(array) {
-  
+  return array.length
 }
+retornaQuantidadeElementos()
 
 // EXERCÍCIO 06
 function retornaExpressoesBooleanas() {
