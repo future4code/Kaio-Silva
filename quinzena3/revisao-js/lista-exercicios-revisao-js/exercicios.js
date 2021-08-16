@@ -72,19 +72,36 @@ function retornaExpressoesBooleanas() {
 
     return respostas
 }
-retornaExpressoesBooleanas()
+// retornaExpressoesBooleanas()
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
+  numeros = []
 
+  for(let i=0; i<n;i++){
+  if(i %2 ===0){
+    numeros.push(i)
+
+  }
 }
+return numeros
+}
+retornaNNumerosPares()
 
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
   // return 'Escaleno'
   // return 'Equilátero'
   // return 'Isósceles'
+  if(a === b && b === c){
+    return 'Equilátero'
+  } else if((a !== b) && (a !== c) && (b !== c) ){
+    return 'Escaleno'
+  } else {
+    return 'Isósceles'
+  }
 }
+checaTriangulo()
 
 // EXERCÍCIO 09
 function comparaDoisNumeros(num1, num2) {
