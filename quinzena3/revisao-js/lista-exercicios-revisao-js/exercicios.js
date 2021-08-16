@@ -25,12 +25,20 @@ function retornaNumerosParesElevadosADois(array) {
  return novo
  
 } 
-retornaNumerosParesElevadosADois()
+// retornaNumerosParesElevadosADois()
 
 // EXERCÍCIO 03
 function retornaNumerosPares(array) {
-
+ pares=[]
+ for(let i =0;i<array.length;i++){
+   if(array[i] %2 ===0){
+     pares.push(array[i])
+   }
+ }
+ return pares
 }
+
+retornaNumerosPares()
 
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
