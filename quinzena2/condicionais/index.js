@@ -75,40 +75,40 @@
 
 
 
-// const idade = Number(prompt("qual é sua idade?"))
+const idade = Number(prompt("qual é sua idade?"))
 
-// if(idade >= 18){
-//     console.log("Você pode dirigir.")
-// } else {
-//     console.log("Você não pode dirigir.")
-// }
+if(idade >= 18){
+    console.log("Você pode dirigir.")
+} else {
+    console.log("Você não pode dirigir.")
+}
 
-// const turnoDaAula = prompt("qual é o seu Turno escolar? digitar M (matutino) ou V (Vespertino) ou N (Noturno).")
-// if (turnoDaAula.toUpperCase() === "M"){
-//     console.log("Bom Dia!")
-// } else if (turnoDaAula.toUpperCase() === "V"){
-//     console.log("Boa Tarde")
-// } else if(turnoDaAula.toUpperCase() === "N"){
-//     console.log("Boa Noite")
-// } else {
-//     console.log("Digite uma das opções dadas")
-// }
+const turnoDaAula = prompt("qual é o seu Turno escolar? digitar M (matutino) ou V (Vespertino) ou N (Noturno).")
+if (turnoDaAula.toUpperCase() === "M"){
+    console.log("Bom Dia!")
+} else if (turnoDaAula.toUpperCase() === "V"){
+    console.log("Boa Tarde")
+} else if(turnoDaAula.toUpperCase() === "N"){
+    console.log("Boa Noite")
+} else {
+    console.log("Digite uma das opções dadas")
+}
 
-// const turnoDaAula = prompt("qual é o seu Turno escolar? digitar M (matutino) ou V (Vespertino) ou N (Noturno).")
-//  switch (turnoDaAula){
-//    case 'M' :
-//     console.log("Bom Dia!")
-//     break;
-//    case 'V' :
-//     console.log("Boa Tarde!")
-//     break
-//    case 'N' :
-//     console.log("Boa Noite!")
-//     break
-//    default :
-//     console.log("Digite uma das opções dadas")
-//     break
-// }
+const turnoDaAula = prompt("qual é o seu Turno escolar? digitar M (matutino) ou V (Vespertino) ou N (Noturno).")
+ switch (turnoDaAula){
+   case 'M' :
+    console.log("Bom Dia!")
+    break;
+   case 'V' :
+    console.log("Boa Tarde!")
+    break
+   case 'N' :
+    console.log("Boa Noite!")
+    break
+   default :
+    console.log("Digite uma das opções dadas")
+    break
+}
 
 
 
