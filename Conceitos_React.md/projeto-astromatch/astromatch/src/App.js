@@ -1,7 +1,9 @@
-
+import{
+  HomePage
+} from './pages';
 function App() {
   return (
-  <h1>Astromatch</h1>
+  <HomePage />
   );
 }
 
